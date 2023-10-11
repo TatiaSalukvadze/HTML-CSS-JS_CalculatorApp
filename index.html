@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript Calculator</title>
+  </head>
+  <body>
+    <div class="formstyle">
+      <div class="header">
+        <h1>calc</h1>
+       <span>
+        <h2>THEME</h2>
+        <div class="ertad">
+          <div class="labels">
+            <label for="one">1</label>
+            <label for="two">2</label>
+            <label for="three">3</label>
+          </div>
+
+          <div class="tri-state-toggle">
+            <input class="tri" type="radio" name="toggle" id="one" checked />
+            <input class="tri" type="radio" name="toggle" id="two" />
+            <input class="tri" type="radio" name="toggle" id="three" />
+          </div></span>
+        </div>
+       
+      </div>
+      <form name="form1">
+        <!-- This input box shows the button pressed by the user in calculator. -->
+        <input id="calc" type="text" name="answer" /> <br />
+        <br />
+        <div class="buts">
+          <!-- Display the calculator button on the screen. -->
+          <!-- onclick() function display the number prsses by the user. -->
+          <div class="flex">
+            <input
+              type="button"
+              value="7"
+              onclick="form1.answer.value += '7' "
+            />
+            <input
+              type="button"
+              value="8"
+              onclick="form1.answer.value += '8' "
+            />
+            <input
+              type="button"
+              value="9"
+              onclick="form1.answer.value += '9' "
+            />
+            <input type="button" class="delre" value="DEL" onclick="form1.answer.value = form1.answer.value.slice(0, -1)" />
+          </div>
+
+          <div class="flex">
+            <input
+              type="button"
+              value="4"
+              onclick="form1.answer.value += '4' "
+            />
+            <input
+              type="button"
+              value="5"
+              onclick="form1.answer.value += '5' "
+            />
+            <input
+              type="button"
+              value="6"
+              onclick="form1.answer.value += '6' "
+            />
+            <input
+              type="button"
+              value="+"
+              onclick="form1.answer.value += '+' "
+            />
+          </div>
+
+          <div class="flex">
+            <input
+              type="button"
+              value="1"
+              onclick="form1.answer.value += '1' "
+            />
+            <input
+              type="button"
+              value="2"
+              onclick="form1.answer.value += '2' "
+            />
+            <input
+              type="button"
+              value="3"
+              onclick="form1.answer.value += '3' "
+            />
+            <input
+              type="button"
+              value="-"
+              onclick="form1.answer.value += '-' "
+            />
+          </div>
+
+          <div class="flex">
+            <input
+              type="button"
+              value="."
+              onclick="form1.answer.value += '.' "
+            />
+            <input
+              type="button"
+              value="0"
+              onclick="form1.answer.value += '0' "
+            />
+            <input
+              type="button"
+              value="/"
+              onclick="form1.answer.value += '/' "
+            />
+            <input
+              type="button"
+              value="*"
+              onclick="form1.answer.value += '*' "
+            />
+          </div>
+
+          <div class="flex">
+            <!-- Display the Cancel button and erase all data entered by the user. -->
+            <input
+              type="button"
+              value="RESET"
+              onclick="form1.answer.value = ' ' "
+              id="clear"
+              class="long delre"
+            />
+            <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->
+            <input
+              type="button"
+              value="="
+              onclick="form1.answer.value = eval(form1.answer.value) "
+              class="long udris"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

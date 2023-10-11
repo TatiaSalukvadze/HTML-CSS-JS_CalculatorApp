@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&family=Chivo&family=League+Spartan:wght@700&family=Red+Hat+Display:wght@500;900&display=swap');
+:root,.one{
+    --bodyb:#3A4663;
+    --upc:#FFF; /* header da zeda input*/
+    --big-inpb:#181F33;
+    --calcb:#242D44;/* calculator baclground*/
+    --butb:#EAE3DC;/* button background color */
+    --butc:#434A59; /* button color */
+    --butshad:#B3A497;/* button box shadow*/
+    --delreb:#647198;/* delete da reset*/
+    --delrec:#FFF;
+    --delreshad:#414E73;
+    --udrisc:#fff;
+    --udrisb:#D03F2F;
+    --udrisshad:#93261A;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+body{
+    background-color:var(--bodyb);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+}
+.formstyle,#calc,.grid{
+    width: 540px;
+}
+.header{
+    color:var(--upc);
+    height: 44px;
+    margin-bottom:31px;
+    margin-top:91px;
+}
+input {
+    width: 101px;
+    height: 64px;
+    border-radius: 10px;
+    border: 0;
+    color: var(--butc);
+    background-color: var(--butb);
+    box-shadow: 0px -4px 0px 0px var(--butshad) inset;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.667px;
+    font-family: 'League Spartan', sans-serif;
+    /* margin-right:20px; */
+}
+#calc{
+    height: 128px;
+    border-radius: 10px;
+    color:var(--upc);
+   background-color: var(--big-inpb);
+   box-shadow:0px 0px 0px 0px;
+    text-align: right;
+        font-size: 56px;
+        font-weight: 700;
+        letter-spacing: -0.933px;
+        padding-right:32px;
+}
+.buts{
+    height: 480px;
+    border-radius: 10px;
+    background-color: var(--calcb);
+    padding:32px;
+
+}
+.flex{
+    display:flex;
+    gap:25px;
+    padding-bottom:24px;
+}
+
+.long{
+    width: 227px;
+}
+.delre{
+    color:var(--delrec);
+    background-color: var(--delreb);
+    box-shadow: 0px -4px 0px 0px var(--delreshad) inset;
+    font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.467px;
+}
+.udris{
+    color:var(--udrisc);
+    background-color: var(--udrisb);
+        box-shadow: 0px -4px 0px 0px var(--udrisshad) inset;
+}
+/* /////////////////// */
+.tri {
+    width: 16px;
+        height: 16px;
+    appearance: none;
+    background-color: var(--udrisb);
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow:0px 0px;
+}
+
+ #two{
+    margin-left: 5px;
+    margin-right:5px;
+} 
+.tri:hover {
+    cursor: pointer;
+}
+
+.tri-state-toggle {
+    background-color: var(--calcb);
+    padding:5px;
+    /* border: 3px solid black; */
+    width: 71px;
+        height: 26px;
+    border-radius: 13px;
+}
+.tri-state-toggle,.labels,.ertad{
+    display: flex;
+        align-items: center;
+}
+.labels{
+    width: 51px;
+        justify-content: space-between;
+font-size: 12px;
+    font-weight: 700;
+    color:var(--upc);
+}
+.ertad{
+    flex-direction: column;
+}
+
+.tri:checked {
+    opacity: 1;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+}
+.header h1{
+    align-self:flex-end;
+}
+.header span{
+    display:flex;
+    align-items:end;
+    gap:26px;
+}
+.header span h2{
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--upc);
+        margin-bottom:7px;
+}
+
+:root:has(#two:checked){
+    --bodyb: #E6E6E6;
+        --upc: #36362C;
+        /* header da zeda input*/
+        --big-inpb: #EEE;
+        --calcb: #D2CDCD;
+        /* calculator baclground*/
+        --butb: #E5E4E1;
+        /* button background color */
+        --butc: #36362C;
+        /* button color */
+        --butshad: #A79E91;
+        /* button box shadow*/
+        --delreb: #378187;
+        /* delete da reset*/
+        --delrec: #FFF;
+        --delreshad: #1B6066;
+        --udrisc: #fff;
+        --udrisb: #C85402;
+        --udrisshad: #873901;
+}
+
+:root:has(#three:checked) {
+    --bodyb: #17062A;
+    --upc: #FFE53D;
+    /* header da zeda input*/
+    --big-inpb: #1E0936;
+    --calcb: #1E0936;
+    /* calculator baclground*/
+    --butb: #331C4D;
+    /* button background color */
+    --butc: #FFE53D;
+    /* button color */
+    --butshad: #881C9E;
+    /* button box shadow*/
+    --delreb: #56077C;
+    /* delete da reset*/
+    --delrec: #FFF;
+    --delreshad: #56077C;
+    --udrisc: #1A2327;
+    --udrisb: #00DED0;
+    --udrisshad: #6CF9F1;
+}
+
+
+@media (max-width:1300px){
+    /* body{
+        background-color: white;
+    }
+     */
+        .formstyle,
+        #calc,
+        .grid {
+            width: 327px;
+        }
+    
+        .header {
+            color: var(--upc);
+            height: 42px;
+            margin-bottom: 32px;
+            margin-top: 30px;
+        }
+    
+        input {
+            width: 60px;
+                height: 64px;
+           
+            font-size: 32px;
+                letter-spacing: -0.533px;
+        }
+    
+        #calc {
+        height: 88px;
+           
+        font-size: 40px;
+            letter-spacing: -0.667px;
+            padding-right: 24px;
+        }
+    
+        .buts {
+                height: 420px;
+            padding: 24px;
+    
+        }
+    
+        .flex {
+            display: flex;
+            gap: 13px;
+            padding-bottom: 13px;
+        }
+    
+        .long {
+        width: 133px;
+        }
+    
+        .delre,.udris {
+        font-size: 20px;
+            letter-spacing: -0.333px;
+        }
+
+}
